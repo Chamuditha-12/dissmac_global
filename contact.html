@@ -203,21 +203,35 @@ function closeSidebar(){document.getElementById('sidebar').classList.remove('ope
 function toggleServices(el){document.getElementById('services-sub').classList.toggle('open');el.classList.toggle('active-parent')}
 window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>40));
 
-function submitContact(){
-  const name=document.getElementById('c-name').value.trim();
-  const email=document.getElementById('c-email').value.trim();
-  const msg=document.getElementById('c-message').value.trim();
-  if(!name||!email||!msg){alert('Please fill in Name, Email, and Message.');return;}
-  if(!/\S+@\S+\.\S+/.test(email)){alert('Please enter a valid email address.');return;}
-  const btn=document.getElementById('submit-btn');
-  btn.textContent='Sending...';btn.disabled=true;
-  setTimeout(()=>{
-    document.getElementById('form-success').style.display='block';
-    btn.style.display='none';
-    ['c-name','c-email','c-phone','c-message'].forEach(id=>document.getElementById(id).value='');
-    document.getElementById('c-service').selectedIndex=0;
-    document.getElementById('c-budget').selectedIndex=0;
-  },1200);
+async function submitContact(){
+  const name = document.getElementById('c-name').value.trim();
+  const email = document.getElementById('c-email').value.trim();
+  const msg = document.getElementById('c-message').value.trim();
+
+  if(!name || !email || !msg){
+    alert('Please fill in Name, Email, and Message.');
+    return;
+  }
+
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  // Formspree එකට data යවනවා
+  const response = await fetch('https://formspree.io/f/xqegyqvg', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ name, email, message: msg })
+  });
+
+  if(response.ok){
+    document.getElementById('form-success').style.display = 'block';
+    btn.style.display = 'none';
+  } else {
+    alert('Something went wrong. Please try again.');
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }
 }
 </script>
 </body>
