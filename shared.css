@@ -53,7 +53,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 #hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 #hamburger.open span:nth-child(2){opacity:0}
 #hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.topbar-logo{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-head);font-size:1.8rem;letter-spacing:3px;color:var(--white);white-space:nowrap}
+.topbar-logo{position:absolute;left:50%;transform:translateX(-50%);
 .topbar-logo .r{color:var(--red)}
 .topbar-logo .g{color:var(--grey);font-size:1rem;letter-spacing:1px}
 .topbar-cta{background:var(--red);color:#fff;padding:.5rem 1.2rem;border-radius:4px;font-size:.85rem;font-weight:600;letter-spacing:.5px;transition:background .2s,transform .2s;white-space:nowrap}
