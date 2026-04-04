@@ -101,112 +101,95 @@
       <button class="tab-btn" onclick="switchTab('sys',this)">🖥️ Business Systems</button>
     </div>
 
-    <!-- Monthly/Annual Toggle -->
-    <div class="toggle-wrap">
-      <span class="toggle-label active" id="lbl-monthly">One-Time</span>
-      <div class="toggle-switch" id="billing-toggle" onclick="toggleBilling()"><div class="toggle-knob"></div></div>
-      <span class="toggle-label" id="lbl-annual">Monthly Retainer</span>
-      <span class="save-badge">Save 20%</span>
-    </div>
 
     <!-- WEB PLANS -->
+    <div id="web-note" style="grid-column:1/-1;background:linear-gradient(135deg,rgba(232,25,44,.15),rgba(232,25,44,.05));border:2px solid rgba(232,25,44,.45);border-radius:14px;padding:1.6rem 2rem;text-align:center;margin-bottom:2rem">
+      <div style="font-size:1.3rem;margin-bottom:.35rem">💡</div>
+      <div style="font-family:var(--font-head);font-size:1.15rem;color:var(--white);letter-spacing:1px;margin-bottom:.4rem">CUSTOM PACKAGES ARE <span style="color:var(--red)">FULLY NEGOTIABLE</span></div>
+      <div style="color:var(--grey);font-size:.88rem;font-weight:300;max-width:580px;margin:0 auto">Pricing is flexible and negotiable, <strong style="color:var(--white)">starting from $40</strong> depending on your requirements — page count and features can be adjusted to fit your budget.</div>
+    </div>
     <div id="tab-web" class="plans-grid">
       <div class="plan-card">
-        <div class="plan-name">Starter</div>
-        <div class="plan-desc">Perfect for small businesses needing a simple professional presence online.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span id="web-s-price">25,000</span></div>
+        <div class="plan-name">Basic Package</div>
+        <div class="plan-desc">Perfect for small businesses needing a clean, mobile-friendly presence online.</div>
+        <div class="plan-price"><span class="currency">$</span><span id="web-s-price">110</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span>✅</span><span>Up to 5 pages</span></li>
-          <li><span>✅</span><span>Mobile responsive design</span></li>
+          <li><span>✅</span><span>Up to 8 web pages</span></li>
+          <li><span>✅</span><span>Clean, responsive design</span></li>
+          <li><span>✅</span><span>Mobile-friendly layout</span></li>
+          <li><span>✅</span><span>Perfect for small businesses</span></li>
           <li><span>✅</span><span>Contact form</span></li>
-          <li><span>✅</span><span>Basic SEO setup</span></li>
-          <li><span>✅</span><span>1 month free support</span></li>
-          <li class="no"><span>❌</span><span>E-commerce functionality</span></li>
-          <li class="no"><span>❌</span><span>Custom animations</span></li>
+          <li class="no"><span>❌</span><span>Integrated chatbot</span></li>
+          <li class="no"><span>❌</span><span>Performance optimization</span></li>
         </ul>
         <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
-      <div class="plan-card popular">
-        <div class="popular-badge">⭐ MOST POPULAR</div>
-        <div class="plan-name">Business</div>
-        <div class="plan-desc">Full-featured website for growing businesses that want to stand out.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span id="web-b-price">55,000</span></div>
+      <div class="plan-card">
+        <div class="plan-name">Advanced Package</div>
+        <div class="plan-desc">High-quality, modern website with performance optimization and integrated chatbot.</div>
+        <div class="plan-price"><span class="currency">$</span><span id="web-b-price">160</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span>✅</span><span>Up to 10 pages</span></li>
-          <li><span>✅</span><span>Custom design & animations</span></li>
-          <li><span>✅</span><span>Full SEO optimization</span></li>
-          <li><span>✅</span><span>Google Analytics setup</span></li>
+          <li><span>✅</span><span>Up to 12 web pages</span></li>
+          <li><span>✅</span><span>High-quality, modern design</span></li>
+          <li><span>✅</span><span>Performance optimized</span></li>
+          <li><span>✅</span><span>Integrated chatbot for customer interaction</span></li>
+          <li><span>✅</span><span>Mobile-friendly layout</span></li>
           <li><span>✅</span><span>Social media integration</span></li>
-          <li><span>✅</span><span>3 months free support</span></li>
           <li class="no"><span>❌</span><span>E-commerce / online store</span></li>
         </ul>
         <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
-      <div class="plan-card">
-        <div class="plan-name">E-Commerce</div>
-        <div class="plan-desc">Complete online store with everything you need to sell products online.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span id="web-e-price">95,000</span></div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li><span>✅</span><span>Unlimited pages</span></li>
-          <li><span>✅</span><span>Full online store setup</span></li>
-          <li><span>✅</span><span>Payment gateway integration</span></li>
-          <li><span>✅</span><span>Inventory management</span></li>
-          <li><span>✅</span><span>Order tracking system</span></li>
-          <li><span>✅</span><span>6 months free support</span></li>
-          <li><span>✅</span><span>Performance optimization</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
-      </div>
     </div>
+
+    <!-- ADS NOTE -->
+    <div style="text-align:center;margin-bottom:1.5rem;color:var(--grey);font-size:.88rem;font-weight:300;display:none" id="ads-note">👉 <span style="color:var(--white)">Prices are flexible</span> depending on complexity and quantity</div>
 
     <!-- ADS PLANS -->
     <div id="tab-ads" class="plans-grid" style="display:none">
       <div class="plan-card">
-        <div class="plan-name">Launch</div>
-        <div class="plan-desc">Get your brand noticed with a focused ad campaign on key platforms.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span>15,000</span><span class="period">/month</span></div>
+        <div class="plan-name">Ad Post Design</div>
+        <div class="plan-desc">Eye-catching ad post designs to grab attention on any platform.</div>
+        <div class="plan-price"><span class="currency">$</span><span>2</span><span class="period"> per post</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span>✅</span><span>1 platform (FB or IG)</span></li>
-          <li><span>✅</span><span>3 ad creatives per month</span></li>
-          <li><span>✅</span><span>Basic audience targeting</span></li>
-          <li><span>✅</span><span>Monthly report</span></li>
-          <li class="no"><span>❌</span><span>Google Ads</span></li>
-          <li class="no"><span>❌</span><span>Video ads</span></li>
+          <li><span>✅</span><span>Social media ready formats</span></li>
+          <li><span>✅</span><span>Custom branding</span></li>
+          <li><span>✅</span><span>FB, IG, WhatsApp & more</span></li>
+          <li><span>✅</span><span>Fast turnaround</span></li>
+          <li class="no"><span>❌</span><span>Video content</span></li>
+          <li class="no"><span>❌</span><span>Animation</span></li>
         </ul>
         <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
-      <div class="plan-card popular">
-        <div class="popular-badge">⭐ MOST POPULAR</div>
-        <div class="plan-name">Growth</div>
-        <div class="plan-desc">Multi-platform campaigns managed and optimized for maximum ROI.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span>30,000</span><span class="period">/month</span></div>
+      <div class="plan-card">
+        <div class="plan-name">10-Second Ad Video</div>
+        <div class="plan-desc">Short, punchy video ads perfect for Instagram Reels, TikTok and Facebook Stories.</div>
+        <div class="plan-price"><span class="currency">$</span><span>5</span><span class="period"> per video</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span>✅</span><span>3 platforms (FB, IG, Google)</span></li>
-          <li><span>✅</span><span>8 ad creatives per month</span></li>
-          <li><span>✅</span><span>Advanced audience targeting</span></li>
-          <li><span>✅</span><span>A/B testing</span></li>
-          <li><span>✅</span><span>Weekly performance report</span></li>
-          <li><span>✅</span><span>Campaign optimization</span></li>
+          <li><span>✅</span><span>10-second video ad</span></li>
+          <li><span>✅</span><span>Custom branding & text</span></li>
+          <li><span>✅</span><span>Background music</span></li>
+          <li><span>✅</span><span>Platform-optimized format</span></li>
+          <li><span>✅</span><span>Suitable for FB, IG, TikTok</span></li>
+          <li><span>✅</span><span>High engagement format</span></li>
         </ul>
         <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
       <div class="plan-card">
-        <div class="plan-name">Enterprise</div>
-        <div class="plan-desc">Full-scale advertising management across all major platforms.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span>60,000</span><span class="period">/month</span></div>
+        <div class="plan-name">20-Second Ad Video</div>
+        <div class="plan-desc">Longer video ads with more detail — ideal for storytelling and product showcases.</div>
+        <div class="plan-price"><span class="currency">$</span><span>9</span><span class="period"> per video</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span>✅</span><span>All platforms incl. TikTok & YouTube</span></li>
-          <li><span>✅</span><span>Unlimited ad creatives</span></li>
-          <li><span>✅</span><span>Video ad production</span></li>
-          <li><span>✅</span><span>Dedicated account manager</span></li>
-          <li><span>✅</span><span>Real-time dashboard access</span></li>
-          <li><span>✅</span><span>Priority support 24/7</span></li>
+          <li><span>✅</span><span>20-second video ad</span></li>
+          <li><span>✅</span><span>Custom branding & text overlays</span></li>
+          <li><span>✅</span><span>Background music & transitions</span></li>
+          <li><span>✅</span><span>Product/service showcase ready</span></li>
+          <li><span>✅</span><span>All major platform formats</span></li>
+          <li><span>✅</span><span>Prices flexible by complexity & quantity</span></li>
         </ul>
         <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
@@ -214,51 +197,12 @@
 
     <!-- SYSTEMS PLANS -->
     <div id="tab-sys" class="plans-grid" style="display:none">
-      <div class="plan-card">
-        <div class="plan-name">Basic System</div>
-        <div class="plan-desc">Simple management system for small businesses and startups.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span>80,000</span></div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li><span>✅</span><span>Up to 3 core modules</span></li>
-          <li><span>✅</span><span>User authentication</span></li>
-          <li><span>✅</span><span>Basic reporting</span></li>
-          <li><span>✅</span><span>Web-based access</span></li>
-          <li><span>✅</span><span>2 months support</span></li>
-          <li class="no"><span>❌</span><span>Mobile app</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
-      </div>
-      <div class="plan-card popular">
-        <div class="popular-badge">⭐ MOST POPULAR</div>
-        <div class="plan-name">Pro System</div>
-        <div class="plan-desc">Comprehensive business system with advanced features and integrations.</div>
-        <div class="plan-price"><span class="currency">LKR</span><span>175,000</span></div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li><span>✅</span><span>Up to 8 modules</span></li>
-          <li><span>✅</span><span>Role-based access control</span></li>
-          <li><span>✅</span><span>Advanced analytics dashboard</span></li>
-          <li><span>✅</span><span>API integrations</span></li>
-          <li><span>✅</span><span>Data export (Excel/PDF)</span></li>
-          <li><span>✅</span><span>6 months support</span></li>
-        </ul>
-        <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
-      </div>
-      <div class="plan-card">
-        <div class="plan-name">Enterprise</div>
-        <div class="plan-desc">Fully custom enterprise-grade system built for complex operations.</div>
-        <div class="plan-price" style="font-size:1.8rem;padding:.5rem 0">Custom Quote</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li><span>✅</span><span>Unlimited modules</span></li>
-          <li><span>✅</span><span>Mobile app (iOS & Android)</span></li>
-          <li><span>✅</span><span>Cloud hosting & deployment</span></li>
-          <li><span>✅</span><span>Third-party integrations</span></li>
-          <li><span>✅</span><span>1 year support & maintenance</span></li>
-          <li><span>✅</span><span>Dedicated development team</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;display:block">Contact Us</a>
+      <!-- Negotiable Pricing Banner -->
+      <div style="grid-column:1/-1;background:linear-gradient(135deg,rgba(232,25,44,.18),rgba(232,25,44,.06));border:2px solid rgba(232,25,44,.5);border-radius:14px;padding:2.5rem 2rem;text-align:center">
+        <div style="font-size:1.8rem;margin-bottom:.5rem">⚙️ 💡</div>
+        <div style="font-family:var(--font-head);font-size:1.4rem;color:var(--white);letter-spacing:1px;margin-bottom:.6rem">PRICING IS <span style="color:var(--red)">FULLY NEGOTIABLE</span></div>
+        <div style="color:var(--grey);font-size:.92rem;font-weight:300;max-width:580px;margin:0 auto 1.4rem">All custom business system pricing is based on your requirements and complexity. <strong style="color:var(--white)">Contact us and we'll work out a price that fits your budget.</strong></div>
+        <a href="contact.html" class="btn-primary" style="display:inline-block">Get a Custom Quote</a>
       </div>
     </div>
   </section>
@@ -316,18 +260,6 @@ function closeSidebar(){document.getElementById('sidebar').classList.remove('ope
 function toggleServices(el){document.getElementById('services-sub').classList.toggle('open');el.classList.toggle('active-parent')}
 window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>40));
 
-let billingMonthly=true;
-function toggleBilling(){
-  billingMonthly=!billingMonthly;
-  const sw=document.getElementById('billing-toggle');
-  sw.classList.toggle('on',!billingMonthly);
-  document.getElementById('lbl-monthly').classList.toggle('active',billingMonthly);
-  document.getElementById('lbl-annual').classList.toggle('active',!billingMonthly);
-  const disc=billingMonthly?1:0.8;
-  document.getElementById('web-s-price').textContent=(25000*disc).toLocaleString();
-  document.getElementById('web-b-price').textContent=(55000*disc).toLocaleString();
-  document.getElementById('web-e-price').textContent=(95000*disc).toLocaleString();
-}
 
 let activeTab='web';
 function switchTab(tab,btn){
@@ -336,7 +268,11 @@ function switchTab(tab,btn){
   document.getElementById('tab-web').style.display='none';
   document.getElementById('tab-ads').style.display='none';
   document.getElementById('tab-sys').style.display='none';
+  document.getElementById('web-note').style.display='none';
+  document.getElementById('ads-note').style.display='none';
   document.getElementById('tab-'+tab).style.display='grid';
+  if(tab==='web') document.getElementById('web-note').style.display='block';
+  if(tab==='ads') document.getElementById('ads-note').style.display='block';
   activeTab=tab;
 }
 
