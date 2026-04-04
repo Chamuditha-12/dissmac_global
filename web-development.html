@@ -78,6 +78,49 @@
       .service-features { grid-template-columns:1fr; }
       .process-steps::before { display:none; }
     }
+
+    /* ── Spacing & centering fixes ── */
+    .section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      margin-bottom: 1.2rem;
+    }
+    .section-desc {
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    /* Centre the section headings that were left-aligned inside centred sections */
+    .section-inner[style*="text-align:center"] .section-label,
+    .section-inner[style*="text-align:center"] .section-title,
+    .section-inner[style*="text-align:center"] .section-desc {
+      text-align: center;
+    }
+
+    /* Tech stack section heading */
+    .section-inner > .section-label,
+    .section-inner > .section-title,
+    .section-inner > .section-desc {
+      /* left-aligned by default, centred only when parent says so */
+    }
+
+    /* Overview grid: give the left column good vertical rhythm */
+    .section-inner > div[style*="grid-template-columns:1fr 1fr"] > div:first-child .section-label { margin-bottom: .6rem; }
+    .section-inner > div[style*="grid-template-columns:1fr 1fr"] > div:first-child .section-title { margin-bottom: 1.4rem; }
+
+    /* Portfolio section headings — left aligned, but with proper gaps */
+    .portfolio-grid { margin-top: 3rem; }
+
+    /* CTA section title gap */
+    section > div > .section-title { margin-bottom: 1rem; }
+
+    /* Extra breathing room between process step numbers and line */
+    .process-steps { margin-top: 4rem; }
   </style>
 </head>
 <body>
@@ -115,7 +158,7 @@
 
 <header id="topbar">
   <button id="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
-  <a href="index.html" class="topbar-logo">Di<span class="r">SS</span>MaC <span class="g">GLOBAL</span></a>
+  <a href="index.html" class="topbar-logo"><img width="130vw" height="43vh" margin-top="150vh" src="sslog.png"></a>
   <a href="contact.html" class="topbar-cta">Get a Quote</a>
 </header>
 
@@ -128,13 +171,13 @@
 </section>
 
 <!-- OVERVIEW -->
-<section class="section" style="padding-top:5rem;padding-bottom:5rem;">
+<section class="section">
   <div class="section-inner">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
       <div>
         <p class="section-label">What We Offer</p>
-        <h2 class="section-title" style="margin-bottom:1.5rem;">Websites That<br>Work As Hard<br><span style="color:var(--red)">As You Do.</span></h2>
-        <p class="section-desc" style="margin-bottom:2.5rem;">We design and develop fast, beautiful, fully responsive websites that represent your brand and drive real results. From simple landing pages to comprehensive multi-page websites — we build it all.</p>
+        <h2 class="section-title">Websites That<br>Work As Hard<br><span style="color:var(--red)">As You Do.</span></h2>
+        <p class="section-desc" style="margin-bottom:1.5rem;">We design and develop fast, beautiful, fully responsive websites that represent your brand and drive real results. From simple landing pages to comprehensive multi-page websites — we build it all.</p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
           <a href="contact.html" class="btn-primary">Start Your Project</a>
           <a href="pricing.html" class="btn-outline">View Pricing</a>
@@ -153,10 +196,10 @@
 </section>
 
 <!-- PROCESS -->
-<section class="section" style="background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);padding-top:5rem;padding-bottom:5rem;">
+<section class="section" style="background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);">
   <div class="section-inner" style="text-align:center;">
     <p class="section-label">How We Work</p>
-    <h2 class="section-title" style="margin-bottom:.8rem;">Our Process</h2>
+    <h2 class="section-title">Our Process</h2>
     <div class="process-steps">
       <div class="step"><div class="step-num">1</div><div class="step-title">Discovery</div><p class="step-text">We understand your business goals, target audience and requirements.</p></div>
       <div class="step"><div class="step-num">2</div><div class="step-title">Design</div><p class="step-text">We create wireframes and visual designs for your approval.</p></div>
@@ -168,12 +211,12 @@
 </section>
 
 <!-- TECH STACK -->
-<section class="section" style="padding-top:5rem;padding-bottom:5rem;">
-  <div class="section-inner" style="text-align:center;">
+<section class="section">
+  <div class="section-inner">
     <p class="section-label">Technologies</p>
-    <h2 class="section-title" style="margin-bottom:.6rem;">Our Tech Stack</h2>
-    <p class="section-desc" style="margin-bottom:1rem;">We use the latest, most powerful technologies to build your website.</p>
-    <div class="tech-grid" style="justify-content:center;">
+    <h2 class="section-title">Our Tech Stack</h2>
+    <p class="section-desc">We use the latest, most powerful technologies to build your website.</p>
+    <div class="tech-grid">
       <span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span>
       <span class="tech-badge">JavaScript</span><span class="tech-badge">React.js</span>
       <span class="tech-badge">Node.js</span><span class="tech-badge">PHP</span>
@@ -185,10 +228,10 @@
 </section>
 
 <!-- PORTFOLIO PLACEHOLDER -->
-<section class="section" style="background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);padding-top:5rem;padding-bottom:5rem;">
-  <div class="section-inner" style="text-align:center;">
+<section class="section" style="background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);">
+  <div class="section-inner">
     <p class="section-label">Our Work</p>
-    <h2 class="section-title" style="margin-bottom:0;">Recent Projects</h2>
+    <h2 class="section-title">Recent Projects</h2>
     <div class="portfolio-grid">
       <div class="portfolio-card"><div class="portfolio-thumb">🌐</div><div class="portfolio-info"><div class="portfolio-name">[Project Name]</div><p class="portfolio-desc">Add your project description here.</p></div></div>
       <div class="portfolio-card"><div class="portfolio-thumb">💼</div><div class="portfolio-info"><div class="portfolio-name">[Project Name]</div><p class="portfolio-desc">Add your project description here.</p></div></div>
@@ -208,7 +251,7 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><div class="brand-name">Di<span class="r">SS</span>MaC <span class="g">Global</span></div><p>One Vision. Limitless Reach.</p></div>
+    <div class="footer-brand"><div class="brand-name"><img width="180vw" height="55vh" src="sslog.png"></div><p>One Vision. Limitless Reach.</p></div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="web-development.html">Web Development</a></li><li><a href="advertisement.html">Advertisement</a></li><li><a href="business-systems.html">Business Systems</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="who-we-are.html">Who We Are</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
   </div>
